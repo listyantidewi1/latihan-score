@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for student in students %}
+        <h1>{{ student['name'] }}</h1>
+        {% if student['score'] > 90 %}
+        <p>congratulations</p>
+        {% elif student['score'] > 75 and student['score'] <= 90 %}
+        <p>very Good</p>
+        {% else %}
+        <p>Maaf, Anda belum lulus</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
