@@ -6,15 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    {% for student in students %}
-        <h1>{{ student['name'] }}</h1>
-        {% if student['score'] > 90 %}
-        <p>congratulations</p>
-        {% elif student['score'] > 75 and student['score'] <= 90 %}
-        <p>very Good</p>
-        {% else %}
-        <p>Maaf, Anda belum lulus</p>
-        {% endif %}
-    {% endfor %}
+    <table style="border: 1px solid black">
+       <tr>
+            <th style="border: 1px solid black">Name</th>
+            <th style="border: 1px solid black">Score</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td style="border: 1px solid black">{{ student['name'] }}</td>
+            <td style="border: 1px solid black">{{ student['score'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

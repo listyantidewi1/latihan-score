@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route('/') #root route
 def hello_world(): #function hello_world
     students = [
@@ -12,5 +11,4 @@ def hello_world(): #function hello_world
         {"name": "Fritz", "score": 40},
         {"name": "Sirius", "score": 75},
     ]
-
     return render_template('index.html', students=students)
